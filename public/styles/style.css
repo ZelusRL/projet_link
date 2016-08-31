@@ -1,0 +1,140 @@
+/*GLOBAL*/
+
+body{
+	font-family: 'Ubuntu', sans-serif;
+	background: #EEE;
+	color: #171717;
+}
+
+img{
+	max-width: 100%;
+}
+
+.clearfix:after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.container{
+	max-width: 1200px;
+	margin: 0 auto;
+}
+
+h2{
+	text-align: center;
+	margin: 60px 0 20px;
+	font-size: 30px;
+}
+
+
+/*HEADER*/
+
+h1{
+	font-size: 40px;
+	text-align: center;
+	padding: 35px 0;
+	color: #eee;
+	font-family: 'Baloo Paaji', cursive;
+	background: #171717;
+
+}
+
+.nav{
+	text-align: center;
+	background: #171717;
+	border-top: 2px solid #fff;
+	border-bottom: 2px solid #fff;
+	box-shadow: 1px 1px 1px #171717;
+}
+
+.nav ul li{
+	display: inline-block;
+	padding: 20px 40px;
+}
+
+.nav ul li a{
+	text-decoration: none;
+	padding: 18px 40px;
+	color: #fff;
+}
+
+.nav ul li a:hover{
+	background: #111;
+}
+
+
+/*HOME*/
+
+.h-home{
+	font-size: 20px;
+	margin: 20px 0 15px;
+}
+
+.p-home{
+	text-align: justify;
+}
+
+.wallpap{
+	margin: 40px 20px 8px 0;
+	float: left;
+	width: 30%;
+}
+
+.last-p{
+	margin-top: 40px;
+}
+
+
+/*LOGIN*/
+
+.h-log{
+	margin-top: 100px;
+}
+
+.container-login{
+	max-width: 500px;
+	margin: 0 auto;
+}
+
+.log-form{
+	margin: 100px 50px 165px;
+}
+
+.input-log{
+	float: right;
+	margin: 15px;
+}
+
+.customLabel{
+	float: left;
+	margin: 15px;
+	padding: 2px;
+}
+
+.new-btn{
+	text-align: center;
+	margin-left: 40%;
+	margin-top: 50px;
+	border: none;
+	background: #171717;
+	color: #fff;
+	padding: 10px 20px;
+	box-shadow: 1px 1px 1px #171717;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.new-btn:hover{
+	background: #111;
+}
+
+
+/*FOOTER*/
+
+.footer{
+	text-align: center;
+	margin-top: 60px;
+	padding: 70px;
+	background: #CCC;
+}
