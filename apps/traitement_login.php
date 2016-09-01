@@ -20,8 +20,8 @@ if(isset($_POST["name"], $_POST["pwd"]))
 		{
 			if(password_verify($pwd, $user['password']))
 			{
-				$_SESSION["id"] = $idIn;
-				$_SESSION["login"] = $login;
+				$_SESSION["id"] = $user['id'];
+				$_SESSION["login"] = $user['login'];
 
 				header("Location: index.php?page=home");
 				exit;

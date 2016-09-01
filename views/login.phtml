@@ -1,6 +1,6 @@
 <div class="container-login">
 	<h2 class="h-log">Se connecter</h2>
-	<div class="error"><?= $error ?></div>
+	<div class="error"><?= htmlentities($error) ?></div>
 	<form method="POST" class="log-form">
 		
 		<label class="customLabel" for="name">Login :</label>
