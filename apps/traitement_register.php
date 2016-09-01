@@ -1,19 +1,20 @@
 <?php
-
-if(isset($_POST["register"]))
+// var_dump($_POST);
+if(isset($_POST["pseudo"], $_POST["password"], $_POST["password2"], $_POST["email"], $_POST["date"]))
 {
 	$login = mysqli_real_escape_string($db, $_POST["pseudo"]);
 	$password = mysqli_real_escape_string($db, $_POST["password"]);
 	$password2 = mysqli_real_escape_string($db, $_POST["password2"]);
 	$email = mysqli_real_escape_string($db, $_POST["email"]);
 	$date = mysqli_real_escape_string($db, $_POST["date"]);
+
 	if(empty($login) || empty($email) || empty($password) || empty($password2) || empty($date))
 	{
 		$error = "Merci de compléter tous les champs...";
 	}
 	else
 	{
-		$req = "SELECT email FROM users WHERE email='".$email."'";
+		$req = "SELECT * FROM users WHERE email='".$email."'";
 		$emails = mysqli_query($db, $req);
 
 		$emailTab = mysqli_fetch_assoc($emails);
@@ -31,7 +32,7 @@ if(isset($_POST["register"]))
 			$options = [
 			    'cost' => 12,
 			];
-			$cryptedPwd = password_hash($password, PASSWORD_BCRYPT, $options)."\n";
+			$cryptedPwd = password_hash($password, PASSWORD_BCRYPT, $options);
 			$req = "INSERT INTO users (login, email, password, birthdate) VALUES ('".$login."', '".$email."', '".$cryptedPwd."', '".$date."')";
 			$res = mysqli_query($db, $req);
 			
