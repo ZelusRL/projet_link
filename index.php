@@ -6,7 +6,7 @@ $error404 = "";
 $page = "home";
 
 $access = ["home", "login", "register", "articles"];
-$accessIn = ["home", "login", "register","articles"];
+$accessIn = ["home", "login","articles", "create"];
 if(isset($_SESSION["in"]))
 {
 	if(isset($_GET["page"]) && in_array($_GET["page"], $accessIn))

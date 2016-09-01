@@ -33,7 +33,7 @@ h2{
 h1{
 	font-size: 40px;
 	text-align: center;
-	padding: 35px 0;
+	padding: 60px 0;
 	color: #eee;
 	font-family: 'Baloo Paaji', cursive;
 	background: #171717;
@@ -137,4 +137,5 @@ h1{
 	margin-top: 60px;
 	padding: 70px;
 	background: #CCC;
+	color: #888;
 }
