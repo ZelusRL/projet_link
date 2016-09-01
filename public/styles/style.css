@@ -86,7 +86,7 @@ h1{
 }
 
 
-/*LOGIN*/
+/*LOGIN -- REGISTER*/
 
 .h-log{
 	margin-top: 100px;
@@ -129,6 +129,17 @@ h1{
 	background: #111;
 }
 
+.error{
+	padding: 30px;
+	width: 400px;
+	margin-left: 50px;
+	text-align: center;
+	/*background: #F2DEDE;*/
+	color: #A94442;
+	position: absolute;
+
+}
+
 
 /*FOOTER*/
 
@@ -137,5 +148,5 @@ h1{
 	margin-top: 60px;
 	padding: 70px;
 	background: #CCC;
-	color: #888;
+	color: #777;
 }

@@ -1,21 +1,22 @@
 <div class="container-login">
 	<h2 class="h-log">Créer un compte :</h2>
+	<div class="error"><?= $error ?></div>
 	<form method="POST" class="log-form">
 		<label class="customLabel" for="name">Login :</label>
-		<input class="input-log" type="text" name="name" id="name"><br>
+		<input class="input-log" type="text" name="pseudo" id="pseudo"><br>
 
-		<label class="customLabel" for="pwd">Mot de passe :</label>
-		<input class="input-log" type="password" name="pwd" id="pwd"><br>
+		<label class="customLabel" for="password">Mot de passe :</label>
+		<input class="input-log" type="password" name="password" id="password"><br>
 
-		<label class="customLabel" for="pwd">Confirmer mdp :</label>
-		<input class="input-log" type="password" name="pwd2" id="pwd2"><br>
+		<label class="customLabel" for="password2">Confirmer mdp :</label>
+		<input class="input-log" type="password" name="password2" id="password2"><br>
 
-		<label class="customLabel" for="pwd">Addresse mail :</label>
+		<label class="customLabel" for="email">Addresse mail :</label>
 		<input class="input-log" type="email" name="email" id="email"><br>
 
-		<label class="customLabel" for="pwd">Date de naissance :</label>
+		<label class="customLabel" for="date">Date de naissance :</label>
 		<input class="input-log" type="text" name="date" id="date"><br>
-		
+
 		<div class="clearfix"></div>
 		<button class="new-btn" type="submit">Entrer</button>
 	</form>

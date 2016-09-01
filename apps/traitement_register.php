@@ -3,10 +3,11 @@
 if(isset($_POST["register"]))
 {
 	$login = mysqli_real_escape_string($db, $_POST["pseudo"]);
-	$email = mysqli_real_escape_string($db, $_POST["email"]);
 	$password = mysqli_real_escape_string($db, $_POST["password"]);
 	$password2 = mysqli_real_escape_string($db, $_POST["password2"]);
-	if(empty($login) || empty($email) || empty($password) || empty($password2))
+	$email = mysqli_real_escape_string($db, $_POST["email"]);
+	$date = mysqli_real_escape_string($db, $_POST["date"]);
+	if(empty($login) || empty($email) || empty($password) || empty($password2) || empty($date))
 	{
 		$error = "Merci de compléter tous les champs...";
 	}
@@ -27,7 +28,11 @@ if(isset($_POST["register"]))
 		}
 		else
 		{
-			$req = "INSERT INTO users (login, email, password) VALUES ('".$login."', '".$email."', '".md5($password)."')";
+			$options = [
+			    'cost' => 12,
+			];
+			$cryptedPwd = password_hash($password, PASSWORD_BCRYPT, $options)."\n";
+			$req = "INSERT INTO users (login, email, password, birthdate) VALUES ('".$login."', '".$email."', '".$cryptedPwd."', '".$date."')";
 			$res = mysqli_query($db, $req);
 			
 			header("Location: index.php?page=login");
