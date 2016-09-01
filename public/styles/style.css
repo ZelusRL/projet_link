@@ -10,6 +10,10 @@ img{
 	max-width: 100%;
 }
 
+*:focus{
+	outline: none;
+}
+
 .clearfix:after{
 	content: "";
 	clear: both;
@@ -138,6 +142,35 @@ h1{
 	color: #A94442;
 	position: absolute;
 
+}
+
+/*CREATE*/
+
+.h-create{
+	margin-bottom: 80px;
+}
+
+.i-title{
+	margin: 10px 0 20px;
+	padding: 7px;
+	width: 40%;
+	border: none;
+	border-radius: 2px;
+	box-shadow: 1px 1px 1px #ccc inset;
+}
+
+form textarea{
+	width: 80%;
+	height: 200px;
+	margin: 10px 0 20px;
+	padding: 8px;
+	border: none;
+	border-radius: 10px;
+	box-shadow: 1px 1px 1px #ccc inset;
+}
+
+.btn-crea{
+	margin-left: 0;
 }
 
 

@@ -4,7 +4,6 @@ if(isset($_POST["name"], $_POST["pwd"]))
 {
 	$name = mysqli_real_escape_string($db, $_POST["name"]);
 	$pwd = mysqli_real_escape_string($db, $_POST["pwd"]);
-	var_dump($_POST);
 
 	if(empty($name) || empty($pwd))
 	{
